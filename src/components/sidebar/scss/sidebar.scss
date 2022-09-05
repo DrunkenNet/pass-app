@@ -1,0 +1,54 @@
+#simpleSidebar {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  width: 300px;
+  height: calc(100% - 85px);
+  list-style: none;
+  text-align: left;
+  padding: 20px;
+  background-color: #e8e8e8;
+  transition: transform 0.5s ease-in-out;
+
+  &.out {
+    transform: translate(-100%, 0px);
+  }
+
+  ul {
+    list-style: none;
+
+    button {
+      width: 100%;
+      text-align: left;
+    }
+
+    ul {
+      margin-top: 25px;
+
+      button:not(:last-child) {
+        margin-bottom: 12.5px;
+      }
+    }
+
+    li {
+      padding: 15px 0;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 2px grey;
+    }
+  }
+
+  ul {
+    &.open_true {
+      display: block;
+    }
+
+    &.open_false {
+      display:none;
+    }
+  }
+
+  > ul {
+    padding-left: 0px;
+  }
+}
